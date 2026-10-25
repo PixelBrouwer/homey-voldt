@@ -2,6 +2,8 @@
 .github/
 .gitignore
 README.md
+README.en.md
+docs/
 SECURITY.md
 SANITIZATION.md
 node_modules/.cache/

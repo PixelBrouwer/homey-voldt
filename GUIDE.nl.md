@@ -1,5 +1,7 @@
 # Voldt met Homey
 
+[Hoofdpagina](README.md) · [Visuele rondleiding met schermvoorbeelden](docs/ZO-WERKT-HET.nl.md) · [English](GUIDE.en.md)
+
 **Openbare broncode:** deze versie 1.0.0 is gesanitiseerd. De private OEM-configuratie ontbreekt; zelfgebouwde versies kunnen pas met een Voldt-account aanmelden nadat die configuratie afzonderlijk is geleverd. Zie README.md en SECURITY.md. Onderstaande stappen beschrijven een geconfigureerde build; de werkende productie-installatie is niet gewijzigd.
 
 Voor Homey Pro met Homey 12.9 of nieuwer. Getest met Homey Pro (2026) en een Voldt Schuko 230 V / 3,7 kW wifi-laadkabel. Homey Pro (2023) gebruikt dezelfde lokale apparchitectuur; dit model is niet afzonderlijk getest. Homey Cloud/Bridge, Bluetooth-only kabels en OCPP-bediening worden niet ondersteund.

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Eenmalig aanmelden, dagelijks lokaal bedienen</title><desc id="desc">Bij koppelen haalt Homey de sleutel en laadfuncties op via het Voldt-account. Daarna lopen laden en metingen via het lokale netwerk.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0l10 5-10 5z" fill="#477ab0"/></marker></defs>
+  <rect width="1200" height="420" rx="20" fill="#f3f7fc"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="40" y="51" font-size="24" fill="#102f52" font-weight="700">Eenmalig koppelen. Daarna lokaal.</text>
+    <rect x="450" y="85" width="300" height="88" rx="16" fill="#e8f0fb" stroke="#adc9e8"/>
+    <text x="600" y="119" text-anchor="middle" font-size="20" fill="#164d8e" font-weight="700">Voldt-account</text>
+    <text x="600" y="148" text-anchor="middle" font-size="16" fill="#52708e">Sleutel en laadfuncties ophalen</text>
+    <path d="M450 128H285v90" fill="none" stroke="#8aa8c7" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+    <text x="260" y="109" text-anchor="middle" font-size="14" fill="#607c99">Alleen bij (opnieuw) koppelen</text>
+    <rect x="80" y="225" width="330" height="132" rx="20" fill="white" stroke="#bdd0e3"/>
+    <rect x="790" y="225" width="330" height="132" rx="20" fill="white" stroke="#bdd0e3"/>
+    <circle cx="128" cy="269" r="19" fill="#164d8e"/><path d="M117 271l11-11 11 11m-18-3v11h14v-11" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="163" y="276" font-size="24" font-weight="700" fill="#102f52">Homey Pro</text>
+    <text x="112" y="316" font-size="16" fill="#60738a">Bediening · Flows · Energy · Insights</text>
+    <text x="824" y="276" font-size="24" font-weight="700" fill="#102f52">Voldt-laadkabel</text>
+    <text x="824" y="316" font-size="16" fill="#60738a">Laden en apparaatmetingen</text>
+    <path d="M430 274h340" stroke="#477ab0" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="600" y="252" text-anchor="middle" font-size="19" font-weight="700" fill="#164d8e">Je eigen lokale netwerk</text>
+    <text x="600" y="312" text-anchor="middle" font-size="15" fill="#60738a">Zonder opnieuw aan te melden</text>
+    <text x="600" y="390" text-anchor="middle" font-size="14" fill="#73869b">Schema ter uitleg. Koppelen zelf start of stopt het laden niet.</text>
+  </g>
+</svg>
