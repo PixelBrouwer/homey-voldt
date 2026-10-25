@@ -1,0 +1,17 @@
+.git/
+.github/
+.gitignore
+README.md
+SECURITY.md
+SANITIZATION.md
+node_modules/.cache/
+private/
+test/
+scripts/
+release/
+dist/
+*.test.js
+*.apk
+*.log
+*.zip
+.env*

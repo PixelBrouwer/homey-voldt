@@ -1,0 +1,15 @@
+node_modules/
+.homeybuild/
+.env
+.env.*
+!.env.example
+env.json
+lib/voldt-app-identity.json
+private/
+release/
+dist/
+*.apk
+*.log
+*.zip
+.DS_Store
+Thumbs.db

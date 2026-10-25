@@ -1,0 +1,47 @@
+{
+  "errors": {
+    "OEM_CONFIG": "This source build is missing its private OEM configuration. Ask the app maintainer for a configured build.",
+    "SETUP_REQUIRED": "Charging control is not configured. Open More > Apps > Voldt > App settings.",
+    "SETUP_CONFIRM": "Local key saved; charging control still needs verification. Open app settings and sign in.",
+    "NOT_PAIRED": "Cable not paired yet. Open More > Apps > Voldt > App settings and sign in.",
+    "LOCAL_UNAVAILABLE": "The cable cannot be reached or verified locally. Check Wi-Fi and close other local cable apps. If its IP or key changed, reconnect through app settings.",
+    "CHARGE_UNCONFIRMED": "The charging command was sent, but the result was not confirmed. Check the cable before trying again.",
+    "USER_PASSWD_WRONG": "Voldt did not accept this email address or password.",
+    "USER_NOT_EXISTS": "Voldt could not find this account. Check the country code and account region.",
+    "USER_SESSION_INVALID": "Your sign-in expired. Sign in again.",
+    "SESSION_EXPIRED": "Your sign-in expired. Sign in again.",
+    "OEM_NETWORK_ERROR": "Voldt could not be reached. Check Homey's internet connection and try again.",
+    "OEM_DEVICE_KEY_MISSING": "Voldt did not return a local key for this cable.",
+    "OEM_PRODUCT_SCHEMA_MISSING": "The cable's charging functions could not be retrieved.",
+    "OEM_PRODUCT_MISSING": "Voldt did not return a supported cable definition.",
+    "OEM_ACCOUNT_DOMAIN": "Voldt returned an unsupported account server.",
+    "OEM_SIGNATURE_FAILED": "The Voldt response could not be verified. Try again later.",
+    "OEM_DECRYPT_FAILED": "The Voldt response could not be verified. Try again later.",
+    "OEM_HTTP_429": "Voldt is limiting requests. Wait a few minutes before trying again.",
+    "ILLEGAL_CLIENT_ID": "Voldt no longer accepts this app's sign-in method. Check for an app update.",
+    "CAPTCHA_REQUIRED": "Voldt requires extra verification. Complete it in the official Voldt app, then try again. This app cannot display a captcha.",
+    "BUSY": "Another sign-in or search is still running. Please wait.",
+    "INPUT": "Check your email, password, country code, region and local IP address.",
+    "NO_CABLE": "No verified cable was selected. Search again.",
+    "UNSUPPORTED_CABLE": "This cable's charging functions are not supported safely.",
+    "NO_LOCAL_CONNECTION": "Homey cannot verify the cable locally. Check its Wi-Fi connection and close the official Voldt app temporarily.",
+    "ONBOARDING_FAILED": "The cable could not be linked. Check your account and Wi-Fi connection, then try again."
+  },
+  "pair": {
+    "title": "Connect your Voldt cable",
+    "intro": "Sign in with your Voldt account. Homey retrieves the local key and charging functions automatically, then controls the cable over your home network.",
+    "email": "Voldt email address", "password": "Voldt password", "advanced": "Account and network options",
+    "country": "Account country code", "region": "Account region", "eu": "Europe", "us": "Americas", "in": "India", "ru": "Russia",
+    "host": "Cable IP address (optional)", "login": "Sign in and find cables", "working": "Signing in and verifying local cables…",
+    "privacy": "Your password is used only to sign in and is not saved. Pairing never starts or stops charging.",
+    "empty": "No reachable, supported cable was found for this account. Connect the cable to Wi-Fi using the Voldt app first. If needed, enter its IP address under account and network options.",
+    "repaired": "The local connection is restored. Your existing device and Flows are preserved.",
+    "already": "This cable is already in Homey. Use app settings to reconnect it.", "done": "Done"
+  },
+  "settings": {
+    "title": "Voldt connection", "intro": "Reconnect an existing cable without removing its device or Flows. To add a cable, use Devices → Add device → Voldt.",
+    "device": "Existing Homey device", "loading": "Loading devices…", "empty": "Add a Voldt cable through Devices first.",
+    "connected": "Local connection configured. No account sign-in is needed for daily use.",
+    "pending": "This device still needs to be connected.", "found": "Choose your cable", "save": "Restore local connection", "success": "Connected. The current setting was read; charging was not changed."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "nl.bryan.voldt",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "PixelBrouwer",
+  "main": "app.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

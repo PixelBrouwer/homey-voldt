@@ -1,0 +1,90 @@
+{
+  "id": "nl.bryan.voldt",
+  "version": "1.0.0",
+  "compatibility": ">=12.9.0",
+  "sdk": 3,
+  "license": "MIT",
+  "runtime": "nodejs",
+  "platforms": ["local"],
+  "name": { "en": "Voldt", "nl": "Voldt" },
+  "description": { "en": "Charge locally, keep track of your energy", "nl": "Lokaal laden, inzicht in je energie" },
+  "category": ["energy"],
+  "brandColor": "#164D8E",
+  "author": { "name": "PixelBrouwer" },
+  "homepage": "https://github.com/PixelBrouwer",
+  "support": "https://github.com/PixelBrouwer",
+  "permissions": [],
+  "capabilities": {
+    "measure_current_limit": {
+      "type": "number", "title": { "en": "Current setting", "nl": "Ingestelde stroom" },
+      "units": { "en": "A", "nl": "A" }, "decimals": 0,
+      "getable": true, "setable": false, "uiComponent": "sensor", "insights": true
+    },
+    "meter_energy_session": {
+      "type": "number", "title": { "en": "Charging session energy", "nl": "Energie laadbeurt" },
+      "units": { "en": "kWh", "nl": "kWh" }, "decimals": 2,
+      "getable": true, "setable": false, "uiComponent": "sensor", "insights": true
+    },
+    "charge_state": {
+      "type": "enum", "title": { "en": "Charging status", "nl": "Laadstatus" },
+      "getable": true, "setable": false, "uiComponent": "sensor",
+      "values": [
+        { "id": "charger_free", "title": { "en": "Available", "nl": "Beschikbaar" } },
+        { "id": "charger_insert", "title": { "en": "Car connected", "nl": "Auto aangesloten" } },
+        { "id": "charger_free_fault", "title": { "en": "Available with fault", "nl": "Beschikbaar met storing" } },
+        { "id": "charger_wait", "title": { "en": "Waiting", "nl": "Wachten" } },
+        { "id": "charger_charging", "title": { "en": "Charging", "nl": "Aan het laden" } },
+        { "id": "charger_pause", "title": { "en": "Paused", "nl": "Gepauzeerd" } },
+        { "id": "charger_end", "title": { "en": "Finished", "nl": "Beëindigd" } },
+        { "id": "charger_fault", "title": { "en": "Fault", "nl": "Storing" } }
+      ]
+    }
+  },
+  "api": {
+    "accountLogin": { "method": "POST", "path": "/account/login" },
+    "accountFind": { "method": "POST", "path": "/account/find" },
+    "accountConfigure": { "method": "POST", "path": "/account/configure" },
+    "accountLogout": { "method": "POST", "path": "/account/logout" },
+    "discoverLocal": { "method": "POST", "path": "/local/discover" },
+    "inspectLocal": { "method": "POST", "path": "/local/inspect" },
+    "configureLocal": { "method": "POST", "path": "/local/configure" },
+    "listDevices": { "method": "GET", "path": "/devices" }
+  },
+  "images": { "small": "/assets/images/small.png", "large": "/assets/images/large.png", "xlarge": "/assets/images/xlarge.png" },
+  "drivers": [{
+    "id": "voldt",
+    "name": { "en": "Voldt cable (local Wi-Fi)", "nl": "Voldt-kabel (lokaal wifi)" },
+    "class": "evcharger",
+    "connectivity": ["lan"],
+    "capabilities": ["evcharger_charging", "measure_power", "meter_power", "meter_energy_session", "measure_temperature", "measure_current_limit", "charge_state"],
+    "capabilitiesOptions": {
+      "evcharger_charging": { "title": { "en": "Charging switch", "nl": "Laadschakelaar" } },
+      "measure_power": { "title": { "en": "Charging power", "nl": "Actueel laadvermogen" }, "decimals": 0 },
+      "meter_power": { "title": { "en": "Total charged energy", "nl": "Totaal geladen energie" }, "decimals": 2 },
+      "measure_temperature": { "title": { "en": "Cable temperature", "nl": "Kabeltemperatuur" } }
+    },
+    "energy": { "evCharger": true, "meterPowerImportedCapability": "meter_power" },
+    "images": {
+      "small": "/drivers/voldt/assets/images/small.png",
+      "large": "/drivers/voldt/assets/images/large.png",
+      "xlarge": "/drivers/voldt/assets/images/xlarge.png"
+    },
+    "settings": [{
+      "id": "poll_interval",
+      "type": "number",
+      "label": { "en": "Status interval (seconds)", "nl": "Statusinterval (seconden)" },
+      "value": 15,
+      "min": 10,
+      "max": 3600,
+      "hint": { "en": "How often to read the cable status. Some cables allow only one local client at a time.", "nl": "Hoe vaak de kabelstatus wordt opgevraagd. Sommige kabels laten één lokale verbinding tegelijk toe." }
+    }],
+    "pair": [
+      { "id": "setup" },
+      { "id": "list_devices", "template": "list_devices", "navigation": { "next": "add_devices", "prev": "setup" } },
+      { "id": "add_devices", "template": "add_devices" }
+    ],
+    "repair": [
+      { "id": "setup" }
+    ]
+  }]
+}

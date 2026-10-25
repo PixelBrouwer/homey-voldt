@@ -1,0 +1,12 @@
+{
+  "encryptedPostData": "AAECAwQFBgcICQoL27Ov34fw08gODcN7gBNd4CjZIMaGO1H6XLCv4IbhEj7A8TYPrL0LsGzuSLsYfEyZ/dOAvZIKxYlprFRQLM+PjvDB6VIKY3Zg7OLVVjvS0sl/LQ==",
+  "signature": "0081d70d74a6a4bcae39704dc76d2bd356a56cb526363324cffed6c463f4bd03",
+  "sessionSid": "abcdef0123456789abcdef0123456789",
+  "compressedResponse": "AAECAwQFBgcICQoLcCObXiNdt0DrG2IisG/XuqhahAe2ijjf00R2yuoI109vzlp3f7cyIntR68Xj7zX1l9tSCvx+837kjinqOnAxxD/WW23btjI90WI=",
+  "outerSignature": "d560d8d2c8ed928e35ed2d7fc31577f8",
+  "businessEcode": "fixture-ecode",
+  "businessResponse": "AAECAwQFBgcICQoLO2bBCUo1Ain16tj+9sRtl4BpQ1kLqDOKEYN66u5kC7STfDrL25zadzVcOYWaqtulZQlUziJx16tHXGtIHlxBVrAPc4i+3w8QWgY=",
+  "businessSignature": "d68e6c56c18e6b4cc71848aec8895c2f",
+  "channelKey": "82ca60ea",
+  "reference": "Java21 JCE AES/GCM/NoPadding; HmacSHA256; GZIPOutputStream; MD5"
+}

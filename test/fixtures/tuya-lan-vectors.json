@@ -1,0 +1,71 @@
+{
+  "source": {
+    "repo": "codetheweb/tuyapi",
+    "sha": "4135c835deaa7c94ad0df9dd4c34878cb5eb2916",
+    "path": "lib/message-parser.js",
+    "generatedBy": "unmodified upstream encoder; Date.now=1700000000123 for fixed 3.5 IV"
+  },
+  "vectors": [
+    {
+      "version": "3.3",
+      "key": "0123456789abcdef",
+      "sequence": 7,
+      "command": 7,
+      "data": {
+        "devId": "test-device",
+        "uid": "test-device",
+        "t": "1700000000",
+        "dps": {
+          "1": true
+        }
+      },
+      "hex": "000055aa000000070000000700000067332e330000000000000000000000005d0a3edbb75b092118f5e6c8a0a56a2e922e5b2833f0e1d9333798a6fbf1122e183973c8581b105980218b4cf9b04a4cf9825e8a7c974132c83dccc1368b0f44b98d177f076695bd7ecd6cfb887fe9ad0220cabf0000aa55"
+    },
+    {
+      "version": "3.4",
+      "key": "0123456789abcdef",
+      "sequence": 7,
+      "command": 7,
+      "data": {
+        "devId": "test-device",
+        "uid": "test-device",
+        "t": "1700000000",
+        "dps": {
+          "1": true
+        }
+      },
+      "hex": "000055aa0000000700000007000000844490b05d74be9368c24a038cbaeded8e752174c3d59de0e0115f7281d1da62235e84fcecef605591de279226b34fd47c2419fe213f358acf01fc52b3a6f5fdd9017aece66fcca781a0367448385dfd2ac82410b7cf06c4be636c61733bb6335505fffe3794c13869f924dc17e10e1e487fa8df7e983f080dc4b2f30143bbb44f0000aa55"
+    },
+    {
+      "version": "3.5",
+      "key": "0123456789abcdef",
+      "sequence": 7,
+      "command": 7,
+      "data": {
+        "devId": "test-device",
+        "uid": "test-device",
+        "t": "1700000000",
+        "dps": {
+          "1": true
+        }
+      },
+      "hex": "000066990000000000070000000700000078313730303030303030303132eec6890f05b880acef7b4b909602de1cece9644d44b1cb56115d7d209074794f9976dd2d5f365250aa29d146c17c54fee07ba6795365b7446d977e55eabdcf7f720dd7aa418daf4ffbead532bb37910f70fee0adc5616c26938abd3e9f115cc4bebfb52a9885a4577d826c8200009966"
+    }
+  ],
+  "sessionVectors": [
+    {
+      "version": "3.4",
+      "key": "0123456789abcdef",
+      "localNonce": "000102030405060708090a0b0c0d0e0f",
+      "remoteNonce": "101112131415161718191a1b1c1d1e1f",
+      "sessionKey": "377222e061a924c591cd9c27ea163ed4"
+    },
+    {
+      "version": "3.5",
+      "key": "0123456789abcdef",
+      "localNonce": "000102030405060708090a0b0c0d0e0f",
+      "remoteNonce": "101112131415161718191a1b1c1d1e1f",
+      "sessionKey": "ed2fd40d0e642b26f836170ad08ba03d"
+    }
+  ]
+}

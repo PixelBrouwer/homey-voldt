@@ -1,0 +1,329 @@
+{
+  "schema": [
+    {
+      "code": "forward_energy_total",
+      "extContent": "{\"cloudless\":1,\"trigger\":\"direct\"}",
+      "iconname": "icon-dp_lightning",
+      "id": 1,
+      "mode": "ro",
+      "name": "正向总有功电量",
+      "property": {
+        "unit": "kW·h",
+        "min": 0,
+        "max": 99999999,
+        "scale": 2,
+        "step": 1,
+        "type": "value"
+      },
+      "trigger": "direct",
+      "type": "obj"
+    },
+    {
+      "code": "work_state",
+      "iconname": "icon-zhuangtai",
+      "id": 3,
+      "mode": "ro",
+      "name": "工作状态",
+      "property": {
+        "range": [
+          "charger_free",
+          "charger_insert",
+          "charger_free_fault",
+          "charger_wait",
+          "charger_charging",
+          "charger_pause",
+          "charger_end",
+          "charger_fault"
+        ],
+        "type": "enum"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "charge_cur_set",
+      "iconname": "icon-shezhi",
+      "id": 4,
+      "mode": "rw",
+      "name": "充电电流设定",
+      "property": {
+        "unit": "A",
+        "min": 1,
+        "max": 255,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "sigle_phase_power",
+      "iconname": "icon-dp_lightning",
+      "id": 5,
+      "mode": "ro",
+      "name": "单相有功功率",
+      "property": {
+        "unit": "kW",
+        "min": 0,
+        "max": 99999999,
+        "scale": 3,
+        "step": 1,
+        "type": "value"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "phase_a",
+      "iconname": "icon-dp_lightning",
+      "id": 6,
+      "mode": "ro",
+      "name": "上报A相电压，电流及功率",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      },
+      "type": "raw"
+    },
+    {
+      "code": "power_total",
+      "iconname": "icon-dp_lightning",
+      "id": 9,
+      "mode": "ro",
+      "name": "总功率",
+      "property": {
+        "unit": "kW",
+        "min": 0,
+        "max": 99999999,
+        "scale": 3,
+        "step": 1,
+        "type": "value"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "fault",
+      "iconname": "icon-baojing",
+      "id": 10,
+      "mode": "ro",
+      "name": "故障告警",
+      "property": {
+        "label": [
+          "ov_cr",
+          "ov2_cr_fault",
+          "ov_vol",
+          "undervoltage_alarm",
+          "contactor_adhesion",
+          "contactor_fault",
+          "earth_fault",
+          "meter_hardware_alarm",
+          "scram_fault",
+          "cp_fault",
+          "meter_commu_fault",
+          "card_reader_fault",
+          "cir_short_fault",
+          "adhesion_fault",
+          "self_test_alarm",
+          "leakagecurr_alarm",
+          "pcb_over_tem"
+        ],
+        "type": "bitmap",
+        "maxlen": 17
+      },
+      "scope": "fault",
+      "type": "obj"
+    },
+    {
+      "code": "work_mode",
+      "extContent": "{\"trigger\":\"direct\"}",
+      "iconname": "icon-dp_mode",
+      "id": 14,
+      "mode": "rw",
+      "name": "工作模式",
+      "property": {
+        "range": [
+          "charge_now",
+          "charge_pct",
+          "charge_energy",
+          "charge_schedule",
+          "charge_delay"
+        ],
+        "type": "enum"
+      },
+      "trigger": "direct",
+      "type": "obj"
+    },
+    {
+      "code": "balance_energy",
+      "iconname": "icon-dp_lightning",
+      "id": 15,
+      "mode": "ro",
+      "name": "剩余可用电量",
+      "property": {
+        "unit": "kW·h",
+        "min": 0,
+        "max": 99999999,
+        "scale": 2,
+        "step": 1,
+        "type": "value"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "clear_energy",
+      "iconname": "icon-dp_lightning",
+      "id": 16,
+      "mode": "rw",
+      "name": "电量清零",
+      "property": {
+        "type": "bool"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "energy_charge",
+      "iconname": "icon-dp_money",
+      "id": 17,
+      "mode": "rw",
+      "name": "电量充值",
+      "property": {
+        "unit": "kW·h",
+        "min": 1,
+        "max": 2000000,
+        "scale": 2,
+        "step": 1,
+        "type": "value"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "switch",
+      "extContent": "{\"trigger\":\"direct\"}",
+      "iconname": "icon-dp_power2",
+      "id": 18,
+      "mode": "rw",
+      "name": "开关",
+      "property": {
+        "type": "bool"
+      },
+      "trigger": "direct",
+      "type": "obj"
+    },
+    {
+      "code": "local_timer",
+      "iconname": "icon-dp_time",
+      "id": 19,
+      "mode": "rw",
+      "name": "定时充电",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      },
+      "type": "raw"
+    },
+    {
+      "code": "meter_id",
+      "extContent": "{\"cloudless\":1}",
+      "iconname": "icon-dp_0",
+      "id": 22,
+      "mode": "ro",
+      "name": "设备号",
+      "property": {
+        "type": "string",
+        "maxlen": 255
+      },
+      "type": "obj"
+    },
+    {
+      "code": "system_version",
+      "iconname": "icon-dp_mode",
+      "id": 23,
+      "mode": "ro",
+      "name": "系统版本",
+      "property": {
+        "type": "string",
+        "maxlen": 255
+      },
+      "type": "obj"
+    },
+    {
+      "code": "temp_current",
+      "extContent": "{\"trigger\":\"direct\"}",
+      "iconname": "icon-dp_c",
+      "id": 24,
+      "mode": "ro",
+      "name": "当前温度",
+      "property": {
+        "unit": "℃",
+        "min": -40,
+        "max": 200,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      },
+      "trigger": "direct",
+      "type": "obj"
+    },
+    {
+      "code": "charge_energy_once",
+      "extContent": "{\"trigger\":\"direct\"}",
+      "iconname": "icon-Ele",
+      "id": 25,
+      "mode": "ro",
+      "name": "单次充电量",
+      "property": {
+        "unit": "kW·h",
+        "min": 1,
+        "max": 999999,
+        "scale": 2,
+        "step": 1,
+        "type": "value"
+      },
+      "trigger": "direct",
+      "type": "obj"
+    },
+    {
+      "code": "online_state",
+      "iconname": "icon-dp_updown",
+      "id": 27,
+      "mode": "rw",
+      "name": "在线状态",
+      "property": {
+        "range": [
+          "offline",
+          "online"
+        ],
+        "type": "enum"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "timer_on",
+      "iconname": "icon-dp_time3",
+      "id": 28,
+      "mode": "rw",
+      "name": "延时上电",
+      "property": {
+        "unit": "h",
+        "min": 0,
+        "max": 12,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      },
+      "type": "obj"
+    },
+    {
+      "code": "mode_set",
+      "extContent": "{\"trigger\":\"direct\"}",
+      "iconname": "icon-setting",
+      "id": 33,
+      "mode": "rw",
+      "name": "充电模式",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      },
+      "trigger": "direct",
+      "type": "raw"
+    }
+  ]
+}

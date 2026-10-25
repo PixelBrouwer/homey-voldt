@@ -1,0 +1,47 @@
+{
+  "errors": {
+    "OEM_CONFIG": "In deze broncodebuild ontbreekt de private OEM-configuratie. Vraag de appbeheerder om een geconfigureerde build.",
+    "SETUP_REQUIRED": "Laadbediening nog niet ingesteld. Open Meer > Apps > Voldt > App configureren.",
+    "SETUP_CONFIRM": "Lokale sleutel opgeslagen; laadbediening nog bevestigen. Open App configureren en meld aan.",
+    "NOT_PAIRED": "Kabel nog niet gekoppeld. Open Meer > Apps > Voldt > App configureren en meld aan.",
+    "LOCAL_UNAVAILABLE": "Kabel lokaal niet bereikbaar of niet te controleren. Controleer wifi en sluit andere lokale kabelapps. Bij een gewijzigd IP-adres of sleutel: koppel opnieuw via App configureren.",
+    "CHARGE_UNCONFIRMED": "Laadopdracht verstuurd, maar resultaat niet bevestigd. Controleer de kabel voordat je opnieuw probeert.",
+    "USER_PASSWD_WRONG": "Voldt accepteert dit e-mailadres of wachtwoord niet.",
+    "USER_NOT_EXISTS": "Voldt vindt dit account niet. Controleer de landcode en accountregio.",
+    "USER_SESSION_INVALID": "Je aanmelding is verlopen. Meld opnieuw aan.",
+    "SESSION_EXPIRED": "Je aanmelding is verlopen. Meld opnieuw aan.",
+    "OEM_NETWORK_ERROR": "Voldt is niet bereikbaar. Controleer de internetverbinding van Homey en probeer opnieuw.",
+    "OEM_DEVICE_KEY_MISSING": "Voldt geeft geen lokale sleutel terug voor deze kabel.",
+    "OEM_PRODUCT_SCHEMA_MISSING": "De laadfuncties van de kabel konden niet worden opgehaald.",
+    "OEM_PRODUCT_MISSING": "Voldt geeft geen ondersteunde kabeldefinitie terug.",
+    "OEM_ACCOUNT_DOMAIN": "Voldt geeft een niet-ondersteunde accountserver terug.",
+    "OEM_SIGNATURE_FAILED": "Het antwoord van Voldt kon niet worden gecontroleerd. Probeer later opnieuw.",
+    "OEM_DECRYPT_FAILED": "Het antwoord van Voldt kon niet worden gecontroleerd. Probeer later opnieuw.",
+    "OEM_HTTP_429": "Voldt beperkt het aantal verzoeken. Wacht enkele minuten en probeer opnieuw.",
+    "ILLEGAL_CLIENT_ID": "Voldt accepteert deze inlogmethode niet meer. Controleer of er een app-update is.",
+    "CAPTCHA_REQUIRED": "Voldt vraagt extra verificatie. Rond die af in de officiële Voldt-app en probeer opnieuw. Deze app kan geen captcha tonen.",
+    "BUSY": "Er loopt nog een aanmelding of zoekactie. Wacht even.",
+    "INPUT": "Controleer e-mailadres, wachtwoord, landcode, regio en lokaal IP-adres.",
+    "NO_CABLE": "Er is geen gecontroleerde kabel geselecteerd. Zoek opnieuw.",
+    "UNSUPPORTED_CABLE": "De laadfuncties van deze kabel worden niet veilig ondersteund.",
+    "NO_LOCAL_CONNECTION": "Homey kan de kabel lokaal niet controleren. Controleer wifi en sluit de officiële Voldt-app tijdelijk.",
+    "ONBOARDING_FAILED": "Koppelen is niet gelukt. Controleer je account en wifi en probeer opnieuw."
+  },
+  "pair": {
+    "title": "Voldt-laadkabel koppelen",
+    "intro": "Meld aan met je Voldt-account. Homey haalt de lokale sleutel en laadfuncties automatisch op en bedient de kabel daarna via je thuisnetwerk.",
+    "email": "Voldt e-mailadres", "password": "Voldt wachtwoord", "advanced": "Account- en netwerkopties",
+    "country": "Landcode van je account", "region": "Accountregio", "eu": "Europa", "us": "Amerika", "in": "India", "ru": "Rusland",
+    "host": "IP-adres kabel (optioneel)", "login": "Aanmelden en kabels zoeken", "working": "Aanmelden en lokale kabels controleren…",
+    "privacy": "Je wachtwoord wordt alleen voor aanmelden gebruikt en niet opgeslagen. Koppelen start of stopt het laden niet.",
+    "empty": "Geen bereikbare, ondersteunde kabel gevonden voor dit account. Verbind de kabel eerst via de Voldt-app met wifi. Vul zo nodig het kabel-IP in bij account- en netwerkopties.",
+    "repaired": "De lokale koppeling is hersteld. Je bestaande apparaat en Flows blijven behouden.",
+    "already": "Deze kabel staat al in Homey. Gebruik de appinstellingen om opnieuw te koppelen.", "done": "Gereed"
+  },
+  "settings": {
+    "title": "Voldt-koppeling", "intro": "Koppel een bestaande kabel opnieuw zonder het apparaat of Flows te verwijderen. Een kabel toevoegen gaat via Apparaten → Apparaat toevoegen → Voldt.",
+    "device": "Bestaand Homey-apparaat", "loading": "Apparaten ophalen…", "empty": "Voeg eerst via Apparaten een Voldt-kabel toe.",
+    "connected": "Lokale koppeling ingesteld. Voor dagelijks gebruik hoef je niet aan te melden.",
+    "pending": "Dit apparaat moet nog worden gekoppeld.", "found": "Kies je kabel", "save": "Lokale koppeling herstellen", "success": "Gekoppeld. De huidige instelling is uitgelezen; het laden is niet gewijzigd."
+  }
+}

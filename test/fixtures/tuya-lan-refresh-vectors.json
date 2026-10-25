@@ -1,0 +1,52 @@
+{
+  "source": {
+    "repo": "codetheweb/tuyapi",
+    "sha": "4135c835deaa7c94ad0df9dd4c34878cb5eb2916",
+    "path": "lib/message-parser.js",
+    "generatedBy": "Unmodified upstream encoder; Date.now=1700000000123 fixes 3.5 IV"
+  },
+  "vectors": [
+    {
+      "version": "3.3",
+      "key": "0123456789abcdef",
+      "sequence": 7,
+      "command": 18,
+      "data": {
+        "dpId": [
+          25,
+          5,
+          6
+        ]
+      },
+      "hex": "000055aa000000070000001200000028aa6dd1d4ca7ca05578c3481991367db803000aeb4ff51d29188f82e4a162a1f68bf3c1070000aa55"
+    },
+    {
+      "version": "3.4",
+      "key": "0123456789abcdef",
+      "sequence": 7,
+      "command": 18,
+      "data": {
+        "dpId": [
+          25,
+          5,
+          6
+        ]
+      },
+      "hex": "000055aa000000070000001200000044aa6dd1d4ca7ca05578c3481991367db803000aeb4ff51d29188f82e4a162a1f65e16b7bef6d4dd65d606c9fd39eee65b4af84fe2d4a7d3d3e7aa12c2a406e3340000aa55"
+    },
+    {
+      "version": "3.5",
+      "key": "0123456789abcdef",
+      "sequence": 7,
+      "command": 18,
+      "data": {
+        "dpId": [
+          25,
+          5,
+          6
+        ]
+      },
+      "hex": "00006699000000000007000000120000002d313730303030303030303132a6cad87f4cdca296b4497ebca32ee83ab34537da5cf86e89d6967d5e3428ecbcbb00009966"
+    }
+  ]
+}

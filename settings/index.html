@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="/homey.js" data-origin="settings"></script>
+<style>
+body{margin:20px;font:16px/1.5 system-ui,sans-serif}main{max-width:680px;margin:auto}h1{font-size:25px}label{display:block;margin:16px 0 5px}input,select,button{width:100%;box-sizing:border-box;padding:12px;font:inherit;border-radius:7px}button{margin:20px 0 12px;background:#164d8e;color:white;border:0}button:disabled{opacity:.6}details{margin:20px 0}summary{cursor:pointer}.notice{font-size:14px;opacity:.8}#error{color:#bc3434}
+</style></head><body><main>
+<h1 data-i18n="settings.title"></h1><p data-i18n="settings.intro"></p>
+<label for="device" data-i18n="settings.device"></label><select id="device" disabled></select><p id="device-status" role="status"></p>
+<form id="login">
+<label for="email" data-i18n="pair.email"></label><input id="email" type="email" autocomplete="username" maxlength="254" required>
+<label for="password" data-i18n="pair.password"></label><input id="password" type="password" autocomplete="current-password" maxlength="1024" required>
+<details><summary data-i18n="pair.advanced"></summary>
+<label for="country" data-i18n="pair.country"></label><input id="country" value="31" inputmode="numeric" pattern="[0-9]{1,4}" required>
+<label for="region" data-i18n="pair.region"></label><select id="region"><option value="eu" data-i18n="pair.eu"></option><option value="us" data-i18n="pair.us"></option><option value="in" data-i18n="pair.in"></option><option value="ru" data-i18n="pair.ru"></option></select>
+<label for="host" data-i18n="pair.host"></label><input id="host" autocomplete="off" inputmode="decimal">
+</details><button id="submit" type="submit" data-i18n="pair.login"></button>
+</form><p class="notice" data-i18n="pair.privacy"></p>
+<section id="choose" hidden><label for="found" data-i18n="settings.found"></label><select id="found"></select><button id="save" type="button" data-i18n="settings.save"></button></section>
+<p id="status" role="status" aria-live="polite"></p><p id="error" role="alert"></p>
+</main><script>
+function onHomeyReady(Homey){
+const el=id=>document.getElementById(id);const api=(method,path,body)=>new Promise((resolve,reject)=>Homey.api(method,path,body,(error,value)=>error?reject(error):resolve(value)));
+document.querySelectorAll('[data-i18n]').forEach(n=>{n.textContent=Homey.__(n.dataset.i18n);});
+let token,devices=[];
+function logout(){if(token){const old=token;token=undefined;api('POST','/account/logout',{token:old}).catch(()=>{});}}
+function select(){logout();el('choose').hidden=true;const item=devices.find(d=>d.key===el('device').value);el('device-status').textContent=Homey.__(item?(item.configured?'settings.connected':'settings.pending'):'settings.empty');el('submit').disabled=!item;}
+async function load(){devices=await api('GET','/devices',null);const previous=el('device').value;el('device').replaceChildren(...devices.map(d=>new Option(d.name,d.key)));if(devices.some(d=>d.key===previous))el('device').value=previous;el('device').disabled=!devices.length;select();}
+el('device').addEventListener('change',select);window.addEventListener('pagehide',logout);
+el('login').addEventListener('submit',async event=>{event.preventDefault();el('submit').disabled=true;el('device').disabled=true;el('save').disabled=true;el('error').textContent='';el('choose').hidden=true;el('status').textContent=Homey.__('pair.working');logout();try{
+ const pending=api('POST','/account/login',{email:el('email').value.trim(),password:el('password').value,countryCode:el('country').value,region:el('region').value});el('password').value='';const auth=await pending;token=auth.token;
+ const result=await api('POST','/account/find',{token,deviceKey:el('device').value,host:el('host').value.trim()||undefined});
+ if(!result.devices.length){el('status').textContent=Homey.__('pair.empty');return;}
+ el('found').replaceChildren(...result.devices.map(d=>new Option(d.name+' ('+d.host+')',d.id)));el('choose').hidden=false;el('status').textContent='';
+}catch(error){el('status').textContent='';el('error').textContent=error.message||Homey.__('errors.ONBOARDING_FAILED');}finally{el('password').value='';el('submit').disabled=!devices.length;el('device').disabled=!devices.length;el('save').disabled=false;}});
+el('save').addEventListener('click',async()=>{el('save').disabled=true;el('error').textContent='';try{await api('POST','/account/configure',{token,deviceKey:el('device').value,id:el('found').value});token=undefined;el('choose').hidden=true;await load();el('status').textContent=Homey.__('settings.success');}catch(error){el('error').textContent=error.message||Homey.__('errors.ONBOARDING_FAILED');}finally{el('save').disabled=false;}});
+el('device-status').textContent=Homey.__('settings.loading');Homey.ready();load().catch(error=>{el('error').textContent=error.message;});
+}
+</script></body></html>
