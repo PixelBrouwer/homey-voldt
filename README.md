@@ -21,6 +21,9 @@
   <a href="README.en.md">English</a>
 </p>
 
+> [!WARNING]
+> **Nog niet gecertificeerd door Athom/Homey.** Deze app is ingediend voor beoordeling, maar heeft nog geen officiële certificering. Installatie en gebruik zijn volledig op eigen risico. Zodra de app is gecertificeerd, werkt PixelBrouwer deze repository bij.
+
 ## Wat kun je ermee?
 
 Deze onafhankelijke community-app van [PixelBrouwer](https://github.com/PixelBrouwer) verbindt een geschikte Voldt-wifilaadkabel met **Homey Pro**. In een geconfigureerde build meld je eenmalig aan met je Voldt-account. Homey haalt de lokale sleutel en laadfuncties op en controleert de verbinding. Daarna lopen bediening en metingen rechtstreeks over je eigen netwerk.

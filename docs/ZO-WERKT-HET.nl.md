@@ -2,6 +2,9 @@
 
 [Terug naar de hoofdpagina](../README.md) · [Volledige handleiding](../GUIDE.nl.md) · [English](../README.en.md)
 
+> [!WARNING]
+> Deze app is nog niet officieel gecertificeerd door Athom/Homey. Installatie en gebruik zijn volledig op eigen risico. PixelBrouwer werkt deze repository bij zodra de certificering is verleend.
+
 Deze rondleiding laat de werkwijze van een **geconfigureerde build** zien. De openbare broncode is gesanitiseerd: voor accountlogin in een eigen build is afzonderlijke private OEM-configuratie nodig. Zie [README](../README.md#broncode-en-privacy).
 
 Alle beelden zijn documentatievoorbeelden met synthetische gegevens, zonder echte accountinformatie of live metingen. Het koppel- en instelformulier zijn gerenderd uit de echte appcode. De omlijsting en het apparaatpaneel zijn illustratief; de werkelijke Homey-indeling kan per versie verschillen.

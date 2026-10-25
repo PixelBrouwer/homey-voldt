@@ -8,6 +8,9 @@ Independent MIT-licensed Homey Pro app by [PixelBrouwer](https://github.com/Pixe
 
 This repository contains the **sanitized source snapshot of version 1.0.0**. That version was submitted to Athom for certification; submission does not mean approval or availability in the Homey App Store.
 
+> [!WARNING]
+> **Not yet certified by Athom/Homey.** This app has been submitted for review but has not received official certification. Installation and use are entirely at your own risk. PixelBrouwer will update this repository once the app is certified.
+
 ## Features
 
 - Local charging start/stop with authenticated status confirmation.

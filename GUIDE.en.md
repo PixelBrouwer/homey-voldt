@@ -2,6 +2,9 @@
 
 [Overview](README.en.md) · [Dutch visual walkthrough](docs/ZO-WERKT-HET.nl.md) · [Nederlands](GUIDE.nl.md)
 
+> [!WARNING]
+> This app is not yet officially certified by Athom/Homey. Installation and use are entirely at your own risk. PixelBrouwer will update this repository once certification is granted.
+
 **Public source:** this version 1.0.0 snapshot is sanitized. Private OEM configuration is omitted; self-built versions require that configuration separately before Voldt account login works. See README.md and SECURITY.md. The steps below describe a configured build; the working production installation is unchanged.
 
 Requires Homey Pro running Homey 12.9 or newer, a Wi-Fi Voldt cable already linked to a Voldt email/password account, and local network access between cable and Homey. Hardware tested: Homey Pro (2026), Voldt Schuko 230 V / 3.7 kW Wi-Fi cable. Homey Pro (2023) uses the same local app architecture but was not separately tested. Homey Cloud/Bridge, Bluetooth-only cables and OCPP control are not supported.
