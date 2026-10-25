@@ -2,7 +2,7 @@
 
 [Nederlands](README.md) · [Visual walkthrough](docs/ZO-WERKT-HET.nl.md) · [English guide](GUIDE.en.md)
 
-![Voldt for Homey — local charging and clear insight](docs/images/banner.png)
+![Voldt for Homey — local charging and clear insight](docs/images/banner-transparent.png)
 
 Independent MIT-licensed Homey Pro app by [PixelBrouwer](https://github.com/PixelBrouwer). Control a compatible Voldt Wi-Fi charging cable over the local network and follow charging power and energy in Homey.
 

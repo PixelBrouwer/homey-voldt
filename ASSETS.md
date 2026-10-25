@@ -18,7 +18,7 @@ Saved outputs: drivers/voldt/assets/images/small.png (75×75), large.png (500×5
 
 Generated source: exec-8ea463cf-abda-4852-b2ac-28a9a2ca2498.png. Original manufacturer reference: https://voldt.nl/cdn/shop/files/voldt-portable-charging-cable-schuko-plug-16A-main-image_421ee47c-5093-466b-a4d8-d8a508ca79b7.png?width=1000&format=png
 
-The manufacturer reference itself is not bundled. Generated artwork is a product illustration and may differ in small details. Store artwork remains subject to Athom's design review.
+The driver artwork is a generated product illustration and may differ in small details. Store artwork remains subject to Athom's design review. The original transparent manufacturer photograph is separately reused for the documentation banner; see docs/images/README.md for its source and ownership notice.
 
 Prompt:
 

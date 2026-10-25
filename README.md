@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/banner.png" alt="Voldt voor Homey — lokaal laden, helder inzicht" width="100%">
+  <img src="docs/images/banner-transparent.png" alt="Voldt voor Homey — lokaal laden, helder inzicht" width="100%">
 </p>
 
 <p align="center">

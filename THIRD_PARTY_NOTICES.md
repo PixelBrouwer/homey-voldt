@@ -12,3 +12,5 @@ The LAN wire format was cross-checked against these MIT-licensed protocol refere
 The OEM request format was reconstructed from the publicly shipped Voldt Android app. No APK, native library, Java bytecode, user session or OEM app signing secret is distributed here. Only an empty configuration template is included. The private configured build uses shared mobile-app identity material for protocol compatibility, supplied separately and ignored by Git. No ownership of vendor identifiers is claimed.
 
 The app and driver PNG artwork was produced using the built-in image generator. The driver artwork uses a manufacturer product photograph as a visual reference; it is illustrative, not an independent hardware certification. See ASSETS.md for provenance and prompts.
+
+The documentation banner separately reuses Voldt's original transparent product photograph without altering the product. Manufacturer photo and trademark rights remain with their owners; they are not relicensed under MIT. Source attribution is provided in docs/images/README.md.
