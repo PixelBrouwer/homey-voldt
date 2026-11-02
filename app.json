@@ -1,6 +1,6 @@
 {
   "id": "nl.bryan.voldt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=12.9.0",
   "sdk": 3,
   "license": "MIT",
@@ -56,8 +56,9 @@
     "name": { "en": "Voldt cable (local Wi-Fi)", "nl": "Voldt-kabel (lokaal wifi)" },
     "class": "evcharger",
     "connectivity": ["lan"],
-    "capabilities": ["evcharger_charging", "measure_power", "meter_power", "meter_energy_session", "measure_temperature", "measure_current_limit", "charge_state"],
+    "capabilities": ["onoff", "evcharger_charging", "measure_power", "meter_power", "meter_energy_session", "measure_temperature", "measure_current_limit", "charge_state"],
     "capabilitiesOptions": {
+      "onoff": { "title": { "en": "Charging", "nl": "Laden" }, "uiQuickAction": true },
       "evcharger_charging": { "title": { "en": "Charging switch", "nl": "Laadschakelaar" } },
       "measure_power": { "title": { "en": "Charging power", "nl": "Actueel laadvermogen" }, "decimals": 0 },
       "meter_power": { "title": { "en": "Total charged energy", "nl": "Totaal geladen energie" }, "decimals": 2 },

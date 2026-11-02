@@ -1,4 +1,8 @@
 {
+  "1.0.1": {
+    "en": "Charging can now be switched on and off with a regular on/off switch, directly from the device card in Homey.",
+    "nl": "Laden aan- en uitzetten met een echte aan/uit-schakelaar, direct vanaf de apparaatkaart in Homey."
+  },
   "1.0.0": {
     "en": "Pair with your Voldt email and password. Retrieve and verify the local key automatically, reconnect existing devices through app settings, and monitor charging power and energy locally.",
     "nl": "Koppel met je Voldt-e-mailadres en wachtwoord. Haal de lokale sleutel automatisch op, herstel bestaande koppelingen via App configureren en volg laadvermogen en energie lokaal."

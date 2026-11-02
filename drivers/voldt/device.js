@@ -8,22 +8,17 @@ const { LocalCharger } = require('../../lib/local-charger');
 const { TELEMETRY_CAPABILITIES } = require('../../lib/charger-telemetry');
 const friendlyError = require('../../lib/friendly-error');
 
+const CHARGING_CAPABILITIES = ['onoff', 'evcharger_charging'];
+
 module.exports = class VoldtDevice extends Homey.Device {
   async onInit() {
     this.deleted = false;
     this.operations = Promise.resolve();
-    this.registerCapabilityListener('evcharger_charging', value => this.enqueue(async () => {
-      try {
-        if (!this.charger) throw friendlyError(this.homey, { code: 'SETUP_REQUIRED' });
-        await this.charger.setCharging(value);
-        await this.setAvailable();
-        // Homey commits the capability after this listener resolves successfully.
-      } catch (error) {
-        const shown = this.runtimeError(error);
-        await this.setUnavailable(shown.message);
-        throw shown;
-      }
-    }));
+    // onoff is the switch shown on the device card; evcharger_charging drives Homey Energy and flows.
+    for (const capability of CHARGING_CAPABILITIES) {
+      this.registerCapabilityListener(capability, value => this.setChargingFromUser(capability, value));
+    }
+    await this.ensureSwitchCapability();
     await this.ensureTelemetryCapabilities();
     if (this.getStoreValue('setupTicket')) {
       try {
@@ -73,7 +68,7 @@ module.exports = class VoldtDevice extends Homey.Device {
       await this.setStoreValue('connectionType', 'cloud');
       if (this.timer) this.homey.clearTimeout(this.timer);
       this.charger = charger;
-      await this.setCapabilityValue('evcharger_charging', enabled);
+      await this.setChargingValues(enabled);
       await this.setAvailable();
       this.schedule();
     });
@@ -98,6 +93,28 @@ module.exports = class VoldtDevice extends Homey.Device {
     });
   }
 
+  setChargingFromUser(source, value) {
+    return this.enqueue(async () => {
+      try {
+        if (!this.charger) throw friendlyError(this.homey, { code: 'SETUP_REQUIRED' });
+        await this.charger.setCharging(value);
+        await this.setAvailable();
+        // Homey commits the source capability after this listener resolves; mirror the other one.
+        await this.setChargingValues(value, source);
+      } catch (error) {
+        const shown = this.runtimeError(error);
+        await this.setUnavailable(shown.message);
+        throw shown;
+      }
+    });
+  }
+
+  async setChargingValues(enabled, skip) {
+    for (const capability of CHARGING_CAPABILITIES) {
+      if (capability !== skip && this.hasCapability(capability)) await this.setCapabilityValue(capability, enabled);
+    }
+  }
+
   enqueue(operation) {
     const pending = this.operations.then(() => this.deleted ? undefined : operation());
     this.operations = pending.catch(() => {});
@@ -109,6 +126,10 @@ module.exports = class VoldtDevice extends Homey.Device {
     return friendlyError(this.homey, { code: error.code === 'TUYA_LAN_UNCONFIRMED' ? 'CHARGE_UNCONFIRMED' : 'LOCAL_UNAVAILABLE' });
   }
 
+  async ensureSwitchCapability() {
+    if (!this.hasCapability('onoff')) await this.addCapability('onoff');
+  }
+
   async ensureTelemetryCapabilities() {
     for (const capability of TELEMETRY_CAPABILITIES) {
       if (!this.hasCapability(capability)) await this.addCapability(capability);
@@ -116,7 +137,7 @@ module.exports = class VoldtDevice extends Homey.Device {
   }
 
   async applySnapshot(snapshot) {
-    await this.setCapabilityValue('evcharger_charging', snapshot.enabled);
+    await this.setChargingValues(snapshot.enabled);
     for (const [capability, value] of Object.entries(snapshot.telemetry || {})) {
       await this.setCapabilityValue(capability, value);
     }

@@ -80,6 +80,26 @@ test('Homey startup only reads, charging events control the cable, deletion canc
   assert.equal(device.scheduled, null);
 });
 
+test('existing devices gain an on/off switch that controls charging and stays in sync with the charging state', async t => {
+  const service = cloudService();
+  t.mock.method(globalThis, 'fetch', service.fetch);
+  const Device = deviceClass();
+  const device = new Device();
+  await device.onInit();
+  assert.equal(device.hasCapability('onoff'), true);
+  assert.equal(device.values.onoff, false);
+  await device.listeners.onoff(true);
+  assert.deepEqual(service.commands.map(item => item.commands[0].value), [true]);
+  assert.equal(device.values.evcharger_charging, true);
+  await device.listeners.evcharger_charging(false);
+  assert.equal(device.values.onoff, false);
+  service.state = true;
+  await device.poll();
+  assert.equal(device.values.onoff, true);
+  assert.equal(device.values.evcharger_charging, true);
+  await device.onDeleted();
+});
+
 test('Homey marks an offline cable unavailable without pretending it is off or sending a command', async t => {
   const service = cloudService();
   service.online = false;

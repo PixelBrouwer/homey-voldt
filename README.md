@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.0"><img src="https://img.shields.io/badge/versie-1.0.0-164D8E?style=flat-square" alt="Versie 1.0.0"></a>
+  <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.1"><img src="https://img.shields.io/badge/versie-1.0.1-164D8E?style=flat-square" alt="Versie 1.0.1"></a>
   <img src="https://img.shields.io/badge/Homey-Pro-164D8E?style=flat-square" alt="Voor Homey Pro">
   <img src="https://img.shields.io/badge/bediening-lokaal_wifi-287760?style=flat-square" alt="Lokale bediening via wifi">
   <a href="LICENSE"><img src="https://img.shields.io/badge/licentie-MIT-287760?style=flat-square" alt="MIT-licentie"></a>
@@ -17,7 +17,7 @@
 <p align="center">
   <a href="GUIDE.nl.md">Handleiding</a> ·
   <a href="docs/ZO-WERKT-HET.nl.md">Bekijk de schermen</a> ·
-  <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.0">Download v1.0.0</a> ·
+  <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.1">Download v1.0.1</a> ·
   <a href="README.en.md">English</a>
 </p>
 
@@ -35,7 +35,7 @@ Deze onafhankelijke community-app van [PixelBrouwer](https://github.com/PixelBro
 | Geen pc nodig voor dagelijks gebruik | Meetwaarden rechtstreeks van de kabel | Je bestaande apparaat en Flows behouden |
 
 > [!IMPORTANT]
-> **Dit is de gesanitiseerde broncode van versie 1.0.0.** Persoonlijke gegevens én OEM-inloggeheimen zijn weggelaten. Zelfgebouwde versies hebben voor Voldt-accountlogin afzonderlijke private OEM-configuratie nodig. De werkende productiebuild bevat die configuratie; deze openbare download is daardoor geen direct inzetbare vervanging. Zie [Broncode en privacy](#broncode-en-privacy).
+> **Dit is de gesanitiseerde broncode van versie 1.0.1.** Persoonlijke gegevens én OEM-inloggeheimen zijn weggelaten. Zelfgebouwde versies hebben voor Voldt-accountlogin afzonderlijke private OEM-configuratie nodig. De werkende productiebuild bevat die configuratie; deze openbare download is daardoor geen direct inzetbare vervanging. Zie [Broncode en privacy](#broncode-en-privacy).
 
 ## Zo ziet het eruit
 
@@ -69,7 +69,8 @@ Een bestaande kabel opnieuw koppelen? Open **Meer → Apps → Voldt → App con
 
 | Veld | Betekenis |
 | --- | --- |
-| **Laadschakelaar** | Laden toestaan of stoppen. De auto moet laden kunnen accepteren. |
+| **Laden** (aan/uit) | Echte aan/uit-schakelaar, ook direct op de apparaatkaart: tik om laden aan of uit te zetten. |
+| **Laadschakelaar** | Dezelfde bediening voor Homey Energy en Flows; blijft gelijk met de aan/uit-schakelaar. De auto moet laden kunnen accepteren. |
 | **Actueel laadvermogen** | Gemeten vermogen in W; 2.800 W is 2,8 kW. |
 | **Totaal geladen energie** | De totaalteller van de kabel in kWh. |
 | **Energie laadbeurt** | Sessieteller in kWh, als de kabel die rapporteert. |
@@ -129,7 +130,7 @@ Accountlogin vereist de hierboven beschreven private OEM-configuratie. Gebruik b
 - [Nederlandse handleiding](GUIDE.nl.md) — koppelen, gebruiken, Flows en problemen oplossen.
 - [Visuele rondleiding](docs/ZO-WERKT-HET.nl.md) — drie schermvoorbeelden met uitleg.
 - [English documentation](README.en.md) — overview and development notes.
-- [Release v1.0.0](https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.0) — broncode-ZIP en checksum.
+- [Release v1.0.1](https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.1) — broncode-ZIP en checksum.
 
 ---
 
