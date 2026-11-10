@@ -2,10 +2,10 @@
 
 [Overview](README.en.md) · [Dutch visual walkthrough](docs/ZO-WERKT-HET.nl.md) · [Nederlands](GUIDE.nl.md)
 
-> [!WARNING]
-> This app is not yet officially certified by Athom/Homey. Installation and use are entirely at your own risk. PixelBrouwer will update this repository once certification is granted.
+> [!TIP]
+> This app is certified by Athom/Homey. Install it from the [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/).
 
-**Public source:** this version 1.0.1 snapshot is sanitized. Private OEM configuration is omitted; self-built versions require that configuration separately before Voldt account login works. See README.md and SECURITY.md. The steps below describe a configured build; the working production installation is unchanged.
+**Public source:** this version 1.0.1 snapshot is sanitized. Private OEM configuration is omitted; self-built versions require that configuration separately before Voldt account login works. See README.md and SECURITY.md. The steps below describe the Homey App Store version, which includes that configuration.
 
 Requires Homey Pro running Homey 12.9 or newer, a Wi-Fi Voldt cable already linked to a Voldt email/password account, and local network access between cable and Homey. Hardware tested: Homey Pro (2026), Voldt Schuko 230 V / 3.7 kW Wi-Fi cable. Homey Pro (2023) uses the same local app architecture but was not separately tested. Homey Cloud/Bridge, Bluetooth-only cables and OCPP control are not supported.
 
@@ -43,9 +43,13 @@ If no cable is found, check your account country/region, local Wi-Fi access and 
 
 Apple/Google sign-in, account registration and captcha UI are not implemented. Complete extra verification in the official app and retry; accounts that continue requiring verification cannot currently use this login route. Pairing/key retrieval depends on the reconstructed vendor mobile API, which may change. Local operation continues using the stored device key while the cable accepts it.
 
-## Install community source
+## Install
 
-Until approved and released in the Homey App Store, extract the source ZIP on a PC and use the official Homey CLI from that directory:
+Install Voldt from the [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) on your Homey Pro. Updates are delivered automatically through the App Store.
+
+### Developers: install from source
+
+To run your own build, extract the source ZIP on a PC and use the official Homey CLI from that directory. Account login requires the separately supplied private OEM configuration (see SECURITY.md):
 
 ```powershell
 homey login

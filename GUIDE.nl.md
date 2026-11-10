@@ -2,10 +2,10 @@
 
 [Hoofdpagina](README.md) · [Visuele rondleiding met schermvoorbeelden](docs/ZO-WERKT-HET.nl.md) · [English](GUIDE.en.md)
 
-> [!WARNING]
-> Deze app is nog niet officieel gecertificeerd door Athom/Homey. Installatie en gebruik zijn volledig op eigen risico. PixelBrouwer werkt deze repository bij zodra de certificering is verleend.
+> [!TIP]
+> Deze app is gecertificeerd door Athom/Homey. Installeer hem via de [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/).
 
-**Openbare broncode:** deze versie 1.0.1 is gesanitiseerd. De private OEM-configuratie ontbreekt; zelfgebouwde versies kunnen pas met een Voldt-account aanmelden nadat die configuratie afzonderlijk is geleverd. Zie README.md en SECURITY.md. Onderstaande stappen beschrijven een geconfigureerde build; de werkende productie-installatie is niet gewijzigd.
+**Openbare broncode:** deze versie 1.0.1 is gesanitiseerd. De private OEM-configuratie ontbreekt; zelfgebouwde versies kunnen pas met een Voldt-account aanmelden nadat die configuratie afzonderlijk is geleverd. Zie README.md en SECURITY.md. Onderstaande stappen beschrijven de versie uit de Homey App Store, waarin die configuratie wel aanwezig is.
 
 Voor Homey Pro met Homey 12.9 of nieuwer. Getest met Homey Pro (2026) en een Voldt Schuko 230 V / 3,7 kW wifi-laadkabel. Homey Pro (2023) gebruikt dezelfde lokale apparchitectuur; dit model is niet afzonderlijk getest. Homey Cloud/Bridge, Bluetooth-only kabels en OCPP-bediening worden niet ondersteund.
 
@@ -56,9 +56,13 @@ Gebruik de standaard Homey-kaarten bij deze kabel: **Begin met opladen**, **Stop
 
 Alleen de eerste koppeling en het opnieuw ophalen van een sleutel vereisen internet en de Voldt-accountdienst. Daarna lopen bediening en metingen rechtstreeks tussen Homey en kabel. Er is geen pc, Tuya-ontwikkelaarsproject of Smart Life-migratie nodig.
 
-## Communityversie installeren
+## Installeren
 
-Zolang deze app niet in de Homey App Store staat, is installatie een ontwikkelaarsstap vanaf een pc. Pak de broncode-ZIP uit, installeer de officiële Homey CLI, meld aan en selecteer je Homey. Voer vanuit de uitgepakte appmap uit:
+Installeer Voldt via de [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) op je Homey Pro. Updates komen daarna automatisch via de App Store binnen.
+
+### Ontwikkelaars: installeren vanuit de broncode
+
+Voor een eigen build pak je de broncode-ZIP uit op een pc, installeer je de officiële Homey CLI, meld je aan en selecteer je Homey. Accountlogin vereist de afzonderlijk geleverde private OEM-configuratie (zie SECURITY.md). Voer vanuit de uitgepakte appmap uit:
 
 ```powershell
 homey login

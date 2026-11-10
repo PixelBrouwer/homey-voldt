@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.1"><img src="https://img.shields.io/badge/versie-1.0.1-164D8E?style=flat-square" alt="Versie 1.0.1"></a>
+  <a href="https://homey.app/nl-nl/app/nl.bryan.voldt/"><img src="https://img.shields.io/badge/Homey_App_Store-gecertificeerd-287760?style=flat-square" alt="Gecertificeerd in de Homey App Store"></a>
   <img src="https://img.shields.io/badge/Homey-Pro-164D8E?style=flat-square" alt="Voor Homey Pro">
   <img src="https://img.shields.io/badge/bediening-lokaal_wifi-287760?style=flat-square" alt="Lokale bediening via wifi">
   <a href="LICENSE"><img src="https://img.shields.io/badge/licentie-MIT-287760?style=flat-square" alt="MIT-licentie"></a>
@@ -15,18 +16,19 @@
 </p>
 
 <p align="center">
+  <a href="https://homey.app/nl-nl/app/nl.bryan.voldt/"><strong>Installeer via de Homey App Store</strong></a> ·
   <a href="GUIDE.nl.md">Handleiding</a> ·
   <a href="docs/ZO-WERKT-HET.nl.md">Bekijk de schermen</a> ·
   <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.1">Download v1.0.1</a> ·
   <a href="README.en.md">English</a>
 </p>
 
-> [!WARNING]
-> **Nog niet gecertificeerd door Athom/Homey.** Deze app is ingediend voor beoordeling, maar heeft nog geen officiële certificering. Installatie en gebruik zijn volledig op eigen risico. Zodra de app is gecertificeerd, werkt PixelBrouwer deze repository bij.
+> [!TIP]
+> **Gecertificeerd door Athom/Homey.** Voldt is goedgekeurd en staat in de [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/). Installeer de app daar rechtstreeks op je Homey Pro; een pc of Homey CLI is niet nodig.
 
 ## Wat kun je ermee?
 
-Deze onafhankelijke community-app van [PixelBrouwer](https://github.com/PixelBrouwer) verbindt een geschikte Voldt-wifilaadkabel met **Homey Pro**. In een geconfigureerde build meld je eenmalig aan met je Voldt-account. Homey haalt de lokale sleutel en laadfuncties op en controleert de verbinding. Daarna lopen bediening en metingen rechtstreeks over je eigen netwerk.
+Deze onafhankelijke community-app van [PixelBrouwer](https://github.com/PixelBrouwer) verbindt een geschikte Voldt-wifilaadkabel met **Homey Pro**. Na installatie uit de Homey App Store meld je eenmalig aan met je Voldt-account. Homey haalt de lokale sleutel en laadfuncties op en controleert de verbinding. Daarna lopen bediening en metingen rechtstreeks over je eigen netwerk.
 
 | Bedienen | Inzicht | Automatiseren |
 | --- | --- | --- |
@@ -35,7 +37,7 @@ Deze onafhankelijke community-app van [PixelBrouwer](https://github.com/PixelBro
 | Geen pc nodig voor dagelijks gebruik | Meetwaarden rechtstreeks van de kabel | Je bestaande apparaat en Flows behouden |
 
 > [!IMPORTANT]
-> **Dit is de gesanitiseerde broncode van versie 1.0.1.** Persoonlijke gegevens én OEM-inloggeheimen zijn weggelaten. Zelfgebouwde versies hebben voor Voldt-accountlogin afzonderlijke private OEM-configuratie nodig. De werkende productiebuild bevat die configuratie; deze openbare download is daardoor geen direct inzetbare vervanging. Zie [Broncode en privacy](#broncode-en-privacy).
+> **Dit is de gesanitiseerde broncode van versie 1.0.1.** Persoonlijke gegevens én OEM-inloggeheimen zijn weggelaten. Voor gewoon gebruik installeer je de app uit de Homey App Store; die versie bevat de benodigde configuratie. Zelfgebouwde versies uit deze broncode hebben voor Voldt-accountlogin afzonderlijke private OEM-configuratie nodig en zijn daardoor geen direct inzetbare vervanging. Zie [Broncode en privacy](#broncode-en-privacy).
 
 ## Zo ziet het eruit
 
@@ -57,7 +59,7 @@ De beelden bevatten geen echte accountgegevens of live metingen. Het koppelformu
 ![Schema: bij koppelen gebruikt Homey het Voldt-account; daarna lopen bediening en metingen over het lokale netwerk](docs/images/zo-werkt-het.svg)
 
 1. Verbind de kabel eerst met wifi in de officiële Voldt-app.
-2. Open in een geconfigureerde Homey-build **Apparaten → + → Nieuw apparaat → Voldt**.
+2. Installeer [Voldt uit de Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) en open **Apparaten → + → Nieuw apparaat → Voldt**.
 3. Meld aan met je Voldt-e-mailadres en wachtwoord. Kies de gevonden kabel en een zone, bijvoorbeeld **Buiten**.
 4. Bedien de kabel vanuit Homey. Voor dagelijks gebruik hoef je niet opnieuw aan te melden.
 
@@ -91,7 +93,7 @@ Gebruik in Flows bijvoorbeeld **Begin met opladen** op een gekozen tijdstip en *
 | Voldt Schuko 230 V / 3,7 kW wifi | Getest met firmware V4.0.2 en LAN-protocol 3.5. |
 | Andere Voldt-uitvoeringen | Niet als getest aangemerkt. |
 | Homey Cloud/Bridge, alleen Bluetooth, OCPP | Niet ondersteund. |
-| Homey App Store | Versie 1.0.0 is ingediend voor certificering; dit is geen goedkeuring. |
+| Homey App Store | Gecertificeerd door Athom en [beschikbaar in de App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/). |
 
 ## Broncode en privacy
 
@@ -110,9 +112,9 @@ Node.js 22+ vereist. De app gebruikt standaardbibliotheken en de Homey SDK; de t
 npm test
 ```
 
-De openbare broncode bevat **67 geslaagde tests** en is gevalideerd op Homey-niveau `publish`. De tests controleren onder meer protocolauthenticatie, laadbevestiging, koppelen zonder laadcommando's en het afschermen van sleutels. Vier tests voor een losse onderzoeksserver zijn weggelaten; één test voor starten zonder private configuratie is toegevoegd.
+De openbare broncode bevat **68 geslaagde tests** en is gevalideerd op Homey-niveau `publish`. De tests controleren onder meer protocolauthenticatie, laadbevestiging, koppelen zonder laadcommando's en het afschermen van sleutels. Vier tests voor een losse onderzoeksserver zijn weggelaten; één test voor starten zonder private configuratie is toegevoegd.
 
-Installeer de officiële Homey CLI en gebruik vanuit de appmap:
+Alleen nodig voor ontwikkeling; gewone gebruikers installeren de app uit de Homey App Store. Installeer de officiële Homey CLI en gebruik vanuit de appmap:
 
 ```sh
 homey login
@@ -127,6 +129,7 @@ Accountlogin vereist de hierboven beschreven private OEM-configuratie. Gebruik b
 
 ## Meer weten
 
+- [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) — de gecertificeerde app installeren.
 - [Nederlandse handleiding](GUIDE.nl.md) — koppelen, gebruiken, Flows en problemen oplossen.
 - [Visuele rondleiding](docs/ZO-WERKT-HET.nl.md) — drie schermvoorbeelden met uitleg.
 - [English documentation](README.en.md) — overview and development notes.
