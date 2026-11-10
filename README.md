@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.1"><img src="https://img.shields.io/badge/versie-1.0.1-164D8E?style=flat-square" alt="Versie 1.0.1"></a>
-  <a href="https://homey.app/a/nl.bryan.voldt"><img src="https://img.shields.io/badge/Homey_App_Store-gecertificeerd-287760?style=flat-square" alt="Gecertificeerd in de Homey App Store"></a>
+  <a href="https://homey.app/nl-nl/app/nl.bryan.voldt/"><img src="https://img.shields.io/badge/Homey_App_Store-gecertificeerd-287760?style=flat-square" alt="Gecertificeerd in de Homey App Store"></a>
   <img src="https://img.shields.io/badge/Homey-Pro-164D8E?style=flat-square" alt="Voor Homey Pro">
   <img src="https://img.shields.io/badge/bediening-lokaal_wifi-287760?style=flat-square" alt="Lokale bediening via wifi">
   <a href="LICENSE"><img src="https://img.shields.io/badge/licentie-MIT-287760?style=flat-square" alt="MIT-licentie"></a>
@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <a href="https://homey.app/a/nl.bryan.voldt"><strong>Installeer via de Homey App Store</strong></a> ·
+  <a href="https://homey.app/nl-nl/app/nl.bryan.voldt/"><strong>Installeer via de Homey App Store</strong></a> ·
   <a href="GUIDE.nl.md">Handleiding</a> ·
   <a href="docs/ZO-WERKT-HET.nl.md">Bekijk de schermen</a> ·
   <a href="https://github.com/PixelBrouwer/homey-voldt/releases/tag/v1.0.1">Download v1.0.1</a> ·
@@ -24,7 +24,7 @@
 </p>
 
 > [!TIP]
-> **Gecertificeerd door Athom/Homey.** Voldt is goedgekeurd en staat in de [Homey App Store](https://homey.app/a/nl.bryan.voldt). Installeer de app daar rechtstreeks op je Homey Pro; een pc of Homey CLI is niet nodig.
+> **Gecertificeerd door Athom/Homey.** Voldt is goedgekeurd en staat in de [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/). Installeer de app daar rechtstreeks op je Homey Pro; een pc of Homey CLI is niet nodig.
 
 ## Wat kun je ermee?
 
@@ -59,7 +59,7 @@ De beelden bevatten geen echte accountgegevens of live metingen. Het koppelformu
 ![Schema: bij koppelen gebruikt Homey het Voldt-account; daarna lopen bediening en metingen over het lokale netwerk](docs/images/zo-werkt-het.svg)
 
 1. Verbind de kabel eerst met wifi in de officiële Voldt-app.
-2. Installeer [Voldt uit de Homey App Store](https://homey.app/a/nl.bryan.voldt) en open **Apparaten → + → Nieuw apparaat → Voldt**.
+2. Installeer [Voldt uit de Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) en open **Apparaten → + → Nieuw apparaat → Voldt**.
 3. Meld aan met je Voldt-e-mailadres en wachtwoord. Kies de gevonden kabel en een zone, bijvoorbeeld **Buiten**.
 4. Bedien de kabel vanuit Homey. Voor dagelijks gebruik hoef je niet opnieuw aan te melden.
 
@@ -93,7 +93,7 @@ Gebruik in Flows bijvoorbeeld **Begin met opladen** op een gekozen tijdstip en *
 | Voldt Schuko 230 V / 3,7 kW wifi | Getest met firmware V4.0.2 en LAN-protocol 3.5. |
 | Andere Voldt-uitvoeringen | Niet als getest aangemerkt. |
 | Homey Cloud/Bridge, alleen Bluetooth, OCPP | Niet ondersteund. |
-| Homey App Store | Gecertificeerd door Athom en [beschikbaar in de App Store](https://homey.app/a/nl.bryan.voldt). |
+| Homey App Store | Gecertificeerd door Athom en [beschikbaar in de App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/). |
 
 ## Broncode en privacy
 
@@ -129,7 +129,7 @@ Accountlogin vereist de hierboven beschreven private OEM-configuratie. Gebruik b
 
 ## Meer weten
 
-- [Homey App Store](https://homey.app/a/nl.bryan.voldt) — de gecertificeerde app installeren.
+- [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) — de gecertificeerde app installeren.
 - [Nederlandse handleiding](GUIDE.nl.md) — koppelen, gebruiken, Flows en problemen oplossen.
 - [Visuele rondleiding](docs/ZO-WERKT-HET.nl.md) — drie schermvoorbeelden met uitleg.
 - [English documentation](README.en.md) — overview and development notes.

@@ -3,7 +3,7 @@
 [Terug naar de hoofdpagina](../README.md) · [Volledige handleiding](../GUIDE.nl.md) · [English](../README.en.md)
 
 > [!TIP]
-> Deze app is gecertificeerd door Athom/Homey. Installeer hem via de [Homey App Store](https://homey.app/a/nl.bryan.voldt).
+> Deze app is gecertificeerd door Athom/Homey. Installeer hem via de [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/).
 
 Deze rondleiding laat de werkwijze van de **versie uit de Homey App Store** zien. De openbare broncode is gesanitiseerd: voor accountlogin in een eigen build is afzonderlijke private OEM-configuratie nodig. Zie [README](../README.md#broncode-en-privacy).
 
@@ -11,7 +11,7 @@ Alle beelden zijn documentatievoorbeelden met synthetische gegevens, zonder echt
 
 ## 1. Je kabel koppelen
 
-Zet de kabel eerst op wifi via de officiële Voldt-app en installeer [Voldt uit de Homey App Store](https://homey.app/a/nl.bryan.voldt). Open daarna **Homey → Apparaten → + → Nieuw apparaat → Voldt** en meld aan met je Voldt-account.
+Zet de kabel eerst op wifi via de officiële Voldt-app en installeer [Voldt uit de Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/). Open daarna **Homey → Apparaten → + → Nieuw apparaat → Voldt** en meld aan met je Voldt-account.
 
 <p align="center"><img src="images/koppelen.png" width="560" alt="Voorbeeld van het echte Nederlandstalige aanmeldformulier uit de appcode, met een synthetisch e-mailadres als placeholder"></p>
 

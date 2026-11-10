@@ -3,7 +3,7 @@
 [Overview](README.en.md) · [Dutch visual walkthrough](docs/ZO-WERKT-HET.nl.md) · [Nederlands](GUIDE.nl.md)
 
 > [!TIP]
-> This app is certified by Athom/Homey. Install it from the [Homey App Store](https://homey.app/a/nl.bryan.voldt).
+> This app is certified by Athom/Homey. Install it from the [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/).
 
 **Public source:** this version 1.0.1 snapshot is sanitized. Private OEM configuration is omitted; self-built versions require that configuration separately before Voldt account login works. See README.md and SECURITY.md. The steps below describe the Homey App Store version, which includes that configuration.
 
@@ -45,7 +45,7 @@ Apple/Google sign-in, account registration and captcha UI are not implemented. C
 
 ## Install
 
-Install Voldt from the [Homey App Store](https://homey.app/a/nl.bryan.voldt) on your Homey Pro. Updates are delivered automatically through the App Store.
+Install Voldt from the [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) on your Homey Pro. Updates are delivered automatically through the App Store.
 
 ### Developers: install from source
 

@@ -3,7 +3,7 @@
 [Hoofdpagina](README.md) · [Visuele rondleiding met schermvoorbeelden](docs/ZO-WERKT-HET.nl.md) · [English](GUIDE.en.md)
 
 > [!TIP]
-> Deze app is gecertificeerd door Athom/Homey. Installeer hem via de [Homey App Store](https://homey.app/a/nl.bryan.voldt).
+> Deze app is gecertificeerd door Athom/Homey. Installeer hem via de [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/).
 
 **Openbare broncode:** deze versie 1.0.1 is gesanitiseerd. De private OEM-configuratie ontbreekt; zelfgebouwde versies kunnen pas met een Voldt-account aanmelden nadat die configuratie afzonderlijk is geleverd. Zie README.md en SECURITY.md. Onderstaande stappen beschrijven de versie uit de Homey App Store, waarin die configuratie wel aanwezig is.
 
@@ -58,7 +58,7 @@ Alleen de eerste koppeling en het opnieuw ophalen van een sleutel vereisen inter
 
 ## Installeren
 
-Installeer Voldt via de [Homey App Store](https://homey.app/a/nl.bryan.voldt) op je Homey Pro. Updates komen daarna automatisch via de App Store binnen.
+Installeer Voldt via de [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) op je Homey Pro. Updates komen daarna automatisch via de App Store binnen.
 
 ### Ontwikkelaars: installeren vanuit de broncode
 

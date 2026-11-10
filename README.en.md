@@ -1,6 +1,6 @@
 # Voldt for Homey
 
-[Install from the Homey App Store](https://homey.app/a/nl.bryan.voldt) · [Nederlands](README.md) · [Visual walkthrough](docs/ZO-WERKT-HET.nl.md) · [English guide](GUIDE.en.md)
+[Install from the Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/) · [Nederlands](README.md) · [Visual walkthrough](docs/ZO-WERKT-HET.nl.md) · [English guide](GUIDE.en.md)
 
 ![Voldt for Homey — local charging and clear insight](docs/images/banner-transparent.png)
 
@@ -9,7 +9,7 @@ Independent MIT-licensed Homey Pro app by [PixelBrouwer](https://github.com/Pixe
 This repository contains the **sanitized source snapshot of version 1.0.1**.
 
 > [!TIP]
-> **Certified by Athom/Homey.** Voldt has been approved and is available in the [Homey App Store](https://homey.app/a/nl.bryan.voldt). Install it directly on your Homey Pro; no PC or Homey CLI is needed.
+> **Certified by Athom/Homey.** Voldt has been approved and is available in the [Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/). Install it directly on your Homey Pro; no PC or Homey CLI is needed.
 
 ## Features
 
@@ -40,7 +40,7 @@ The sanitized factory loads private configuration only when account login is req
 
 ## Use and develop
 
-Read the [Dutch guide](GUIDE.nl.md) or [English guide](GUIDE.en.md). First connect the cable to Wi-Fi in the official Voldt app. Install [Voldt from the Homey App Store](https://homey.app/a/nl.bryan.voldt), then pair through **Devices → Add device → Voldt**. Reconnect through **More → Apps → Voldt → App settings**.
+Read the [Dutch guide](GUIDE.nl.md) or [English guide](GUIDE.en.md). First connect the cable to Wi-Fi in the official Voldt app. Install [Voldt from the Homey App Store](https://homey.app/nl-nl/app/nl.bryan.voldt/), then pair through **Devices → Add device → Voldt**. Reconnect through **More → Apps → Voldt → App settings**.
 
 Runtime uses Node.js standard libraries and the Homey SDK. Unit/integration tests require Node.js 22+ and no package installation:
 
