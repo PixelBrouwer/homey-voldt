@@ -4,9 +4,9 @@ This public repository contains source code and synthetic test fixtures. It does
 
 ## Private build configuration
 
-The configured production build uses shared OEM app integration/signing material. That material is omitted from this public source. Only an empty `lib/voldt-app-identity.example.json` template is provided; `lib/voldt-app-identity.json` is ignored by Git. Never commit a populated file, include it in a public source release, or paste it into an issue. The same applies to `env.json`, `.env` files, device keys and account/session exports.
+The Homey App Store build uses shared OEM app integration/signing material. That material is omitted from this public source. Only an empty `lib/voldt-app-identity.example.json` template is provided; `lib/voldt-app-identity.json` is ignored by Git. Never commit a populated file, include it in a public source release, or paste it into an issue. The same applies to `env.json`, `.env` files, device keys and account/session exports.
 
-The unconfigured source loads normally. Account login returns an explicit configuration error until the private OEM file has been supplied separately. The source snapshot's version remains 1.0.0; this private-configuration boundary is the documented sanitization change from the submitted build. This does not change the charging protocol or device commands.
+The unconfigured source loads normally. Account login returns an explicit configuration error until the private OEM file has been supplied separately. The source snapshot's version matches the published app (1.0.1); this private-configuration boundary is the documented sanitization change from the Homey App Store build. This does not change the charging protocol or device commands.
 
 ## Credentials at runtime
 
